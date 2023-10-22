@@ -1,5 +1,24 @@
 kubeadm으로 쿠버네티스 v1.27 설치
- 
+
+참고한링크
+
+Kubernetes 노드가 클러스터에 가입하지 못함
+https://stackoverflow.com/questions/73102570/kubernetes-node-fails-to-join-cluster
+
+특정 버전의 Kubernetes를 설치하는 방법은 무엇입니까?
+https://stackoverflow.com/questions/49721708/how-to-install-specific-version-of-kubernetes
+
+안녕하세요, kubeadm init 에러가 발생합니다.
+https://www.inflearn.com/questions/589535/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-kubeadm-init-%EC%97%90%EB%9F%AC%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%A9%EB%8B%88%EB%8B%A4
+
+CRI-O 기반으로 쿠버네티스 설치하기(Calico 설치)
+https://blog.naver.com/isc0304/222419990142
+
+[Kubernetes]Multi CRI-socket found
+https://velog.io/@kbw0226/KubernetesMulti-CRI-socket-found
+
+쿠버네티스 1.27을 설치하는 방법
+https://devopsforu.com/how-to-install-kubernetes-1-27/
  
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
