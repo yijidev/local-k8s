@@ -58,15 +58,11 @@ CRI-O 설치 후 머신 복제
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
   ```   
-  ``` 
-  export KUBECONFIG=/etc/kubernetes/admin.conf
-  ```   
+  ``` export KUBECONFIG=/etc/kubernetes/admin.conf ```   
   ```
   kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
   ```   
 
 - 노드에서
-  ```
-  kubeadm join <control-plane-ip>:<control-plane-port> --token <token> --discovery-token-ca-cert-hash <hash>
-  ```
+  ``` kubeadm join <control-plane-ip>:<control-plane-port> --token <token> --discovery-token-ca-cert-hash <hash> ```
 
