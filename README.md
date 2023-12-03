@@ -11,7 +11,7 @@ control-plane 1대, node 2대
 
 ## Ubuntu 22.04 설치 후 기본 세팅   
 - 저장소 업데이트 및 패키지를 최신화    
-``` apt update && apt dist-upgrade -y ```   
+``` apt update && apt upgrade -y ```   
 - openssh-server, curl, vim, tree 설치   
 ``` apt-get install -y openssh-server curl vim tree ```   
 - TimeZone 변경   
