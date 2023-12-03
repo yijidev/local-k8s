@@ -20,7 +20,7 @@ echo "..................................... 재부팅 없이 sysctl 매개변수
 sysctl --system
 
 export OS=xUbuntu_22.04
-export VERSION=1.27.5
+export VERSION=1.27
 
 echo "..................................... 저장소 추가"
 
