@@ -32,8 +32,8 @@ curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/
 curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$VERSION/$OS/Release.key | gpg --dearmor -o /usr/share/keyrings/libcontainers-crio-archive-keyring.gpg
 
 echo ".....................................  패키지 색인 업데이트 및 CRI-O 설치"
-apt-get update
-apt-get install cri-o cri-o-runc
+apt update
+apt install cri-o cri-o-runc
 
 echo "..................................... CRI-O 활성화 및 시작"
 systemctl daemon-reload
