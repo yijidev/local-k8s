@@ -1,12 +1,28 @@
 # VirtualBox에서 쿠버네티스 구축하기   
 control-plane 1대, node 2대
-- NAT Network 생성   
+
+-Network 설정 : 고정IP 사용
+
+![화면 캡처 2023-12-03 151023](https://github.com/yijidev/local-k8s/assets/119959530/41a8473e-92aa-4987-aa65-992409fdd5ee)
 
 
+![화면 캡처 2023-12-03 151044](https://github.com/yijidev/local-k8s/assets/119959530/5748193b-192a-4b70-862d-7e72098366ff)
 
-![image](https://github.com/yijidev/local-k8s/assets/119959530/4040b6b0-fef9-4094-9399-11215e20b5d6)
+
+![화면 캡처 2023-12-03 150857](https://github.com/yijidev/local-k8s/assets/119959530/3694edf4-5cec-42ad-94ea-6355be5202c7)
+
+
+![화면 캡처 2023-12-03 150946](https://github.com/yijidev/local-k8s/assets/119959530/0d85e634-a018-4fa3-9805-5df4a0556922)
+
+
+![ip주소-2](https://github.com/yijidev/local-k8s/assets/119959530/6ddd535a-0669-4e55-9db0-7a289366d27b)
+
+
+![ip주소](https://github.com/yijidev/local-k8s/assets/119959530/7b02b18a-0fd2-47ff-8bb7-25b2eb9bc4d6)
+
 - Ubuntu 22.04   
 - Kubernetes 1.27.5
+- CRI-O 1.27
 
 
 ## Ubuntu 22.04 설치 후 기본 세팅   
@@ -27,9 +43,9 @@ control-plane 1대, node 2대
 
     ```
     127.0.0.1 localhost
-    10.100.0.104 control-plane.example.com control-plane
-    10.100.0.101 node1.example.com node1
-    10.100.0.102 node2.example.com node2
+    192.168.75.100 control-plane.example.com control-plane
+    192.168.75.101 node1.example.com node1
+    192.168.75.102 node2.example.com node2
     ```   
 --------------------------------------   
 #### 메모   
@@ -47,6 +63,8 @@ control-plane 1대, node 2대
 
 CRI-O 설치 후 머신 복제   
 복제한 머신 각 네트워크 재설정 및 리부팅  
+버전으로 인한 에러 참고사항 : https://github.com/cri-o/cri-o/blob/main/install.md#apt-based-operating-systems-1
+
 
 ## 각 노드에 Kubeadm 설치   
 ``` sh kubeadm-install.sh ```
