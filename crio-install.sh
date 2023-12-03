@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 #CRI-O 설치를 위한 필수 구성 요소 설치 및 구성
 echo "..................................... .conf 파일을 만들어 부팅시 모듈을 로드"
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
